@@ -55,6 +55,6 @@ function cursor(){
         })
     })
 }
-loco()
-cursor()
+loco();
+cursor();
 
