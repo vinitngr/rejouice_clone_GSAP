@@ -41,12 +41,10 @@ function cursor(){
         })
     })
     page1.addEventListener('mousemove' , function(e){
-     
         gsap.to(cursor , {
             x: e.pageX -20,
             y: e.pageY - 20,
         })
-       
     })
     page1.addEventListener('mouseleave' , function(e){
         gsap.to(cursor , {
@@ -55,6 +53,13 @@ function cursor(){
         })
     })
 }
-loco();
+// loco();
 cursor();
+
+gsap.from('.headline > span' , {
+  y: 100 ,
+  stagger: 0.1 ,
+  opacity : 0 ,
+  duration: 0.5,
+})
 
