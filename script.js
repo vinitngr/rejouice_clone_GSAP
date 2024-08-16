@@ -107,7 +107,6 @@ function menuAnimation() {
     {
       scale: 1, 
       duration: 0.6,
-      delay: 0.3,
       ease: 'power1.out',
       paused: true 
     }
@@ -130,17 +129,21 @@ function menuAnimation() {
     }
   );
 
-  // gsap.set(".right_mc div", {
-  //   y: 80,
-  //   opacity: 0,
-  // });
-  
   menu.addEventListener("click", () => {
-    gsap.to("#menubar", {
+
+    let tl = gsap.timeline()
+    tl.to("#menubar", {
       height: "calc(100vh - 12vw)",
       duration: 0.7,
       ease: "power1.out",
     });
+    tl.from('.quote span' , {
+      x: 80 ,
+    }, 's')
+    tl.from('.quote span' , {
+      opacity:0 ,
+      stagger:0.1 
+    }, 's')
 
     animation.play();
 
@@ -158,6 +161,7 @@ function menuAnimation() {
       duration: 1,
       delay: 0.4,
     });
+   
    animation2.play()
   });
 
@@ -172,6 +176,8 @@ function menuAnimation() {
       duration:0.6 ,
       ease: 'power1.out'
     })
+
+    animation.vars.stagger= 0;
     animation.reverse();
     animation2.reverse()
   });

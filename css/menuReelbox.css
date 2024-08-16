@@ -135,3 +135,6 @@
   justify-content: center;
   align-items: center;
 }
+.quote span{
+  display: inline-block;
+}
