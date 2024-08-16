@@ -38,7 +38,6 @@ function loco() {
   ScrollTrigger.refresh();
 }
 // loco();
-
 function page1Animation() {
   const tl = gsap.timeline({ delay: 0.2 });
   tl.from(

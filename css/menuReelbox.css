@@ -64,7 +64,6 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
-  
 }
 
 .buttondiv {
@@ -161,18 +160,19 @@ button::before {
   z-index: -1;
   top: 0;
   left: 0;
-  transition: width 0.3s ease; /* Optional: adds smooth transition */
+  transition: width 0.3s ease;
 }
 
 button:hover::before {
   width: 100%;
 }
-.right_mc div:hover{
+/* .right_mc div:hover{
   text-decoration: underline;
   text-decoration-thickness: 2px;
-}
+} */
 .right_mc div{
   overflow: hidden;
+  width: fit-content;
 }
 .onhover {
   position: relative;
@@ -193,4 +193,7 @@ button:hover::before {
 
 .onhover:hover::after {
   transform: scaleX(1); 
+}
+.right_mc .onhover::after {
+  height: 2px; 
 }
