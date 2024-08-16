@@ -109,4 +109,4 @@ page1Animation();
 function page2Animation(){
 
 }
-page2Animation()
+page2Animation();
