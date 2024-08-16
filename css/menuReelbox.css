@@ -105,7 +105,13 @@
 .social {
   display: flex;
   justify-content: space-evenly;
-  gap: 10px;
+  gap: 15px;
+  font-family: rejoy2;
+  font-size: 16px;
+}
+.social svg{
+  vertical-align: bottom;
+  transition: transform 0.3s ease; 
 }
 
 .line {
@@ -137,4 +143,37 @@
 }
 .quote span{
   display: inline-block;
+}
+
+button{
+  position: relative;
+  overflow: hidden;
+}
+button:hover{
+  color: white;
+}
+button::before {
+  content: '';
+  height: 100%;
+  width: 0;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Optional: adds smooth transition */
+}
+
+button:hover::before {
+  width: 100%;
+}
+.right_mc div:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.right_mc div{
+  overflow: hidden;
+}
+.onhover:hover{
+text-decoration: underline;
 }

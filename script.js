@@ -110,8 +110,7 @@ function menuAnimation() {
       ease: 'power1.out',
       paused: true 
     }
-  );
-  
+  ); 
   const animation = gsap.fromTo(
     ".right_mc div",
     {
@@ -144,6 +143,13 @@ function menuAnimation() {
       opacity:0 ,
       stagger:0.1 
     }, 's')
+    tl.from('.social div' , {
+      x: 80 ,
+      y: 10,
+      delay: -0.2 ,
+      opacity: 0 ,
+      stagger:0.05 
+    } , 's')
 
     animation.play();
 
@@ -182,8 +188,24 @@ function menuAnimation() {
     animation2.reverse()
   });
 }
+function socialSectionHover(){
+  let forhovers = document.querySelectorAll('.social div');
 
-
+  forhovers.forEach((forhover) => {
+    forhover.addEventListener('mouseover', () => {
+      let svg = forhover.querySelector('svg');
+        svg.style.transform = 'rotate(45deg)';
+      // console.log(svg.parentElement)
+    });
+  
+    forhover.addEventListener('mouseout', () => {
+      let svg = forhover.querySelector('svg');
+        svg.style.transform = '';
+    });
+  });
+}
 menuAnimation();
+socialSectionHover();
+
 
 
