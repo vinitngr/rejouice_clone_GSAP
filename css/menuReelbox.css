@@ -1,8 +1,7 @@
 #menubar {
-    /* height: 0; */
     /* height: calc(100vh - 15vw); */
     /* height: 32vw; */
-    height: 490px;
+    height: 490px ;
     width: 100%;
     position: absolute;
     top: 0;
@@ -14,7 +13,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-     justify-content: space-between;
+    justify-content: space-between;
   }
   .reelbox {
     position: absolute;
@@ -37,6 +36,7 @@
   font-family: rejoy2;
   font-size: 1.4vw;
   margin-right: 1vw;
+  transform: translate(-6px , -5px);
 }
 .menu-logo{
   font-family: rejoy;
@@ -57,8 +57,12 @@
 .right_mc{
   height: 17vw;
   width: 39vw;
-  background-color: rgb(255, 253, 208);
+
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
 }
 .playreel{
   padding: 10;
@@ -67,16 +71,20 @@
   justify-content: space-between;
   align-items: center;
 }
-.video-container{
+/* .video-container{
   height: 80%;
   background-color: rgb(175, 175, 175);
+  border-radius: 5px;
+} */
+.video-container video{
+  position: relative;
+  height: auto;
 }
-
 
 .foot_content{
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 .social{
   display: flex;
@@ -84,7 +92,47 @@
   gap: 10px;
 }
 .line{
-  height: 1.5px;
-  background-color: grey;
+  height: 1px;
+  background-color: rgb(168, 168, 168);
 }
-/* style="height: 55px; background-color:rgb(208, 208, 208);" */
+.right_mc>div{
+  font-size:3.5vw;
+  line-height: 0.9;
+  font-family: rejoy2;
+}
+.playreel{
+    font-family: rejoy2;
+}
+.buttondiv{
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: center; */
+  display: flex;
+  width: 37vw;
+  align-self: flex-end;
+  padding: 1.4vw;
+  text-align: end ;
+ 
+}
+.buttondiv button{
+  padding: 0.9vw 1.6vw;
+  border-radius: 50px;
+  border: 1px solid rgb(36, 36, 36);
+  background-color: transparent;
+  font-family: rejoy2;
+  font-size: 1vw;
+  color: rgb(76, 76, 76);
+}
+.quote{
+  font-family: rejoy;
+  font-size: large;
+  color: rgb(76, 76, 76);
+}
+
+.playreel{
+  font-size: 1.1vw;
+}
+
+#menubar{
+  height: 0;
+}

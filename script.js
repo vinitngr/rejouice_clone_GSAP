@@ -64,7 +64,7 @@ function page1Animation() {
   menu.addEventListener("click", () => {
     let menubar = document.querySelector("#menubar");
     gsap.to(menubar, {
-      height: "calc(100vh - 15vw)",
+      height: "calc(100vh - 12vw)",
       duration: 0.5,
       ease: "power1.out",
     });
