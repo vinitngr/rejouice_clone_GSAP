@@ -101,18 +101,28 @@ page1Animation();
 const menu = document.querySelector("#menu");
 const close = document.querySelector('#close');
 
+const animation = gsap.fromTo(".right_mc div",
+  {
+    y: 80,
+    opacity: 0,
+    stagger: 0.2 ,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    stagger: 0.1,
+    duration: 0.3, 
+    delay:1
+  }
+);
+
 menu.addEventListener("click", () => {
   gsap.to("#menubar", {
     height: "calc(100vh - 12vw)",
     duration: 0.7,
     ease: "power1.out",
   });
-
-  gsap.from(".right_mc div", {
-    y: 80,
-    opacity: 0,
-    stagger: 0.1,
-  });
+  animation.play()
   
   gsap.set(".line", { width: "0%" });
   
@@ -135,15 +145,5 @@ close.addEventListener('click', () => {
     ease: "power1.out",
   });
 
-  gsap.to(".right_mc div", {
-    y: 80,
-    opacity: 0,
-    stagger: {
-      amount: 0.1,
-      from: "end"
-    }, 
-    // stagger: -0.1 ,   both stagger value have difference in time for each 
-    duration: 0.7,
-  });
-
+  animation.reverse();
 }); 
