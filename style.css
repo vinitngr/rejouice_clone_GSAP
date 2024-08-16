@@ -64,7 +64,6 @@ nav {
   align-items: center;
   font-family: rejoy2;
   font-size: 1.4vw;
-  z-index: 200;
 }
 #menu,
 .tva {
@@ -89,8 +88,8 @@ nav {
   font-size: 27vw;
   color: rgba(255, 255, 255, 0.957);
   font-family: rejoy;
-  left: 50%;
-  bottom: -3.8%;
+  left: 49%;
+  bottom: -13%;
   transform: translateX(-50%);
   cursor: default;
   display: flex;
@@ -118,4 +117,17 @@ nav {
   background-color: black;
   z-index: 202;
   overflow: hidden;
+}
+.navelem-zindex {
+  z-index: 200;
+}
+
+.headline .ij {
+  transform: scaleY(0.76) scaleX(0.9);
+
+  line-height: 1.35;
+  vertical-align: bottom;
+}
+.headline span {
+  letter-spacing: -0.5vw;
 }

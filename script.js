@@ -1,4 +1,3 @@
-
 function loco(){
     gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +38,28 @@ function page1Animation(){
     opacity : 0 ,
     duration: 0.5,
   })
-  
+    let menu= document.querySelector('#menu')
+  menu.addEventListener('click' , ()=>{
+    let menubar= document.querySelector('#menubar')
+    gsap.to(menubar,{ 
+      height: 'calc(100vh - 15vw)',
+      duration: 0.5, 
+      ease: 'power1.out' ,
+    });
+  })
+
+  let click = document.querySelector('.click');
+  click.addEventListener('click', () => {
+    console.log('hi')
+      let reelbox = document.querySelector('.reelbox');
+      gsap.to(reelbox, {
+          width: '100%', 
+          duration: 0.5,
+          ease: 'power1.out',
+      });
+  });
+
+
 }
 function cursor(){
     const page1= document.querySelector('.page1content')
@@ -66,24 +86,3 @@ function cursor(){
 // loco();
 cursor();
 page1Animation()
-let menu= document.querySelector('#menu')
-menu.addEventListener('click' , ()=>{
-  let menubar= document.querySelector('#menubar')
-  gsap.to(menubar,{ 
-    height: 'calc(100vh - 15vw)',
-    duration: 0.5, 
-    ease: 'power1.out' ,
-  });
-})
-
-let click = document.querySelector('.click');
-click.addEventListener('click', () => {
-  console.log('hi')
-    let reelbox = document.querySelector('.reelbox');
-    gsap.to(reelbox, {
-        width: '100%', 
-        duration: 0.5,
-        ease: 'power1.out',
-    });
-});
-
