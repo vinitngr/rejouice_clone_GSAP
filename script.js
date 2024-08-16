@@ -71,7 +71,6 @@ function page1Animation() {
       ease: "power1.out",
     });
   });
-
 }
 function cursor() {
   const page1 = document.querySelector(".page1content");
@@ -98,52 +97,87 @@ function cursor() {
 cursor();
 page1Animation();
 
-const menu = document.querySelector("#menu");
-const close = document.querySelector('#close');
-
-const animation = gsap.fromTo(".right_mc div",
-  {
-    y: 80,
-    opacity: 0,
-    stagger: 0.2 ,
-  },
-  {
-    y: 0,
-    opacity: 1,
-    stagger: 0.1,
-    duration: 0.3, 
-    delay:1
-  }
-);
-
-menu.addEventListener("click", () => {
-  gsap.to("#menubar", {
-    height: "calc(100vh - 12vw)",
-    duration: 0.7,
-    ease: "power1.out",
-  });
-  animation.play()
+function menuAnimation() {
+  const menu = document.querySelector("#menu");
+  const close = document.querySelector("#close");
+  const animation2 = gsap.fromTo('.video-container video',
+    {
+      scale: 0,
+    },
+    {
+      scale: 1, 
+      duration: 0.6,
+      delay: 0.3,
+      ease: 'power1.out',
+      paused: true 
+    }
+  );
   
-  gsap.set(".line", { width: "0%" });
+  const animation = gsap.fromTo(
+    ".right_mc div",
+    {
+      y: 80,
+      opacity: 0,
+      stagger: 0.2,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      duration: 0.3,
+      delay: 0.2,
+      paused: true,
+    }
+  );
+
+  // gsap.set(".right_mc div", {
+  //   y: 80,
+  //   opacity: 0,
+  // });
   
-  gsap.to(".line", {
-    width: "100%",
-    delay: 0.3,
-    duration: 1,
-  });
-  gsap.from(".buttondiv button", {
-    y: 150,
-    opacity: 0,
-    duration: 1,
-  });
-});
+  menu.addEventListener("click", () => {
+    gsap.to("#menubar", {
+      height: "calc(100vh - 12vw)",
+      duration: 0.7,
+      ease: "power1.out",
+    });
 
-close.addEventListener('click', () => {
-  gsap.to("#menubar", {
-    height: 0,
-    duration: 0.7,
-    ease: "power1.out",
+    animation.play();
+
+    gsap.set(".line", { width: "0%" });
+
+    gsap.to(".line", {
+      width: "100%",
+      delay: 0.3,
+      duration: 1,
+    });
+    
+    gsap.from(".buttondiv button", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      delay: 0.4,
+    });
+   animation2.play()
   });
 
-  animation.reverse();
-}); 
+  close.addEventListener("click", () => {
+    gsap.to("#menubar", {
+      height: 0,
+      duration: 0.7,
+      ease: "power1.out",
+    });
+    gsap.to('.video-container video' ,{
+      scale: 0.1 ,
+      duration:0.6 ,
+      ease: 'power1.out'
+    })
+    animation.reverse();
+    animation2.reverse()
+  });
+}
+
+
+menuAnimation();
+
+

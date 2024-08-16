@@ -130,3 +130,8 @@
   line-height: 0.9;
   font-family: rejoy2;
 }
+.video-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
