@@ -1,0 +1,90 @@
+#menubar {
+    /* height: 0; */
+    /* height: calc(100vh - 15vw); */
+    /* height: 32vw; */
+    height: 490px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #edece7;
+    z-index: 200;
+    overflow: hidden;
+    padding: 0px 2.8vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+     justify-content: space-between;
+  }
+  .reelbox {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    background-color: black;
+    z-index: 202;
+    overflow: hidden;
+  }
+
+.menu-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3vw;
+  
+}
+#close{
+  font-family: rejoy2;
+  font-size: 1.4vw;
+  margin-right: 1vw;
+}
+.menu-logo{
+  font-family: rejoy;
+  font-size: 1.7vw;
+
+}
+.menucontent{
+  display: flex;
+  justify-content: space-between;
+}
+.left_mc{
+  height: 17vw;
+  width: 23vw;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+.right_mc{
+  height: 17vw;
+  width: 39vw;
+  background-color: rgb(255, 253, 208);
+  border-radius: 10px;
+}
+.playreel{
+  padding: 10;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video-container{
+  height: 80%;
+  background-color: rgb(175, 175, 175);
+}
+
+
+.foot_content{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.social{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.line{
+  height: 1.5px;
+  background-color: grey;
+}
+/* style="height: 55px; background-color:rgb(208, 208, 208);" */

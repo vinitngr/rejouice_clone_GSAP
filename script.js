@@ -50,8 +50,9 @@ function page1Animation() {
     "a"
   );
   tl.from(
-    ".tva>span",
+    ".tva > span",
     {
+      x: 100,
       stagger: 0.1,
       opacity: 0,
       duration: 0.5,
@@ -110,3 +111,4 @@ function page2Animation(){
 
 }
 page2Animation();
+

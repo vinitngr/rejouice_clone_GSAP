@@ -7,7 +7,6 @@ html {
   scrollbar-width: thin; 
   scrollbar-color: #888 #f1f1f1; 
 }
-
 .click {
   opacity: 0;
   height: 100px;
@@ -70,6 +69,8 @@ nav {
 #menu,
 .tva {
   cursor: pointer;
+  display: flex;
+  gap:3px;
 }
 
 .page1content {
@@ -83,12 +84,12 @@ nav {
 .page2 {
   width: 100%;
   height: 100vh;
-  background-color: antiquewhite;
+  background-color: rgb(255, 252, 249);
 }
 .headline {
   position: absolute;
   font-size: 27vw;
-  color: rgba(255, 255, 255, 0.957);
+  color: rgba(255, 253, 250, 0.974);
   font-family: rejoy;
   left: 49%;
   bottom: -13%;
@@ -100,36 +101,19 @@ nav {
 }
 .headline span {
   display: inline-block;
+  letter-spacing: -0.5vw;
 }
-#menubar {
-  height: 0;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #edece7;
-  z-index: 200;
-  overflow: hidden;
-}
-.reelbox {
-  position: absolute;
-  height: 100%;
-  width: 0;
-  left: 0;
-  background-color: black;
-  z-index: 202;
-  overflow: hidden;
-}
+
 .navelem-zindex {
   z-index: 200;
 }
 
 .headline .ij {
   transform: scaleY(0.76) scaleX(0.9);
-
   line-height: 1.35;
   vertical-align: bottom;
 }
-.headline span {
-  letter-spacing: -0.5vw;
+
+.tva > span {
+  display: inline-block;
 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scroll Test</title>
+  <style>
+    html {
+      scroll-behavior: smooth ;
+      overflow: hidden;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .page {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+    #page1 {
+      background-color: #3498db;
+    }
+    #page2 {
+      background-color: #e74c3c;
+    }
+    #page3 {
+      background-color: #2ecc71;
+    }
+    #page4 {
+      background-color: #f39c12;
+    }
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    nav a {
+      display: block;
+      margin: 5px 0;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#page1">Go to Page 1</a>
+    <a href="#page2">Go to Page 2</a>
+    <a href="#page3">Go to Page 3</a>
+    <a href="#page4">Go to Page 4</a>
+  </nav>
+
+  <div id="page1" class="page">Page 1</div>
+  <div id="page2" class="page">Page 2</div>
+  <div id="page3" class="page">Page 3</div>
+  <div id="page4" class="page">Page 4</div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scroll with Adjustable Speed</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .page {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+    #page1 { background-color: #3498db; }
+    #page2 { background-color: #e74c3c; }
+    #page3 { background-color: #2ecc71; }
+    #page4 { background-color: #f39c12; }
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    nav a {
+      display: block;
+      margin: 5px 0;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#page1" onclick="smoothScrollTo('#page1')">Go to Page 1</a>
+    <a href="#page2" onclick="smoothScrollTo('#page2')">Go to Page 2</a>
+    <a href="#page3" onclick="smoothScrollTo('#page3')">Go to Page 3</a>
+    <a href="#page4" onclick="smoothScrollTo('#page4')">Go to Page 4</a>
+  </nav>
+
+  <div id="page1" class="page">Page 1</div>
+  <div id="page2" class="page">Page 2</div>
+  <div id="page3" class="page">Page 3</div>
+  <div id="page4" class="page">Page 4</div>
+
+  <script>
+    const scrollSpeed = 1000; // Adjust this value to change the scroll speed (in milliseconds)
+
+    function smoothScrollTo(element) {
+      const duration = scrollSpeed; // Use the scrollSpeed variable for duration
+      const start = window.pageYOffset;
+      const target = document.querySelector(element).offsetTop;
+      const startTime = performance.now();
+
+      function scroll() {
+        const now = performance.now();
+        const time = Math.min(1, (now - startTime) / duration);
+        const easedTime = time * (2 - time); // ease-in-out effect
+        console.log(duration , start , target ,startTime , now , time , easedTime)
+        window.scrollTo(0, start + (target - start) * easedTime);
+
+        if (time < 1) {
+          requestAnimationFrame(scroll);
+        }
+      }
+
+      scroll();
+    }
+  </script>
+</body>
+</html>  -->
