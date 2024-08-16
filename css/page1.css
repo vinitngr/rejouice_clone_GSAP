@@ -4,6 +4,8 @@ html {
   padding: 0;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
+  scrollbar-width: thin; 
+  scrollbar-color: #888 #f1f1f1; 
 }
 
 .click {
@@ -44,11 +46,11 @@ video {
 }
 @font-face {
   font-family: rejoy;
-  src: url(source/rejoy.woff2);
+  src: url(../source/rejoy.woff2);
 }
 @font-face {
   font-family: rejoy2;
-  src: url(source/rejoy2.woff2);
+  src: url(../source/rejoy2.woff2);
 }
 
 div {
