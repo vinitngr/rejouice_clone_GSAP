@@ -1,120 +1,81 @@
 #menubar {
-    /* height: calc(100vh - 15vw); */
-    /* height: 32vw; */
-    height: 490px ;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #edece7;
-    z-index: 200;
-    overflow: hidden;
-    padding: 0px 2.8vw;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .reelbox {
-    position: absolute;
-    height: 100%;
-    width: 0;
-    left: 0;
-    background-color: black;
-    z-index: 202;
-    overflow: hidden;
-  }
+  height: 0; /* Set initial height to 0 */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #edece7;
+  z-index: 200;
+  overflow: hidden;
+  padding: 0px 2.8vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-.menu-nav{
+.reelbox {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: 0;
+  background-color: black;
+  z-index: 202;
+  overflow: hidden;
+}
+
+.menu-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 3vw;
-  
+  cursor: pointer;
 }
-#close{
+
+#close {
   font-family: rejoy2;
   font-size: 1.4vw;
   margin-right: 1vw;
-  transform: translate(-6px , -5px);
-}
-.menu-logo{
-  font-family: rejoy;
-  font-size: 1.7vw;
+  transform: translate(-6px, -5px);
 
 }
-.menucontent{
+
+.menu-logo {
+  font-family: rejoy;
+  font-size: 1.7vw;
+}
+
+.menucontent {
   display: flex;
   justify-content: space-between;
 }
-.left_mc{
+
+.left_mc {
   height: 17vw;
   width: 23vw;
   border-radius: 5px;
   overflow: hidden;
-
 }
-.right_mc{
+
+.right_mc {
   height: 17vw;
   width: 39vw;
-
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
 }
-.playreel{
-  padding: 10;
-  height: 20%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-/* .video-container{
-  height: 80%;
-  background-color: rgb(175, 175, 175);
-  border-radius: 5px;
-} */
-.video-container video{
-  position: relative;
-  height: auto;
-}
 
-.foot_content{
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-}
-.social{
-  display: flex;
-  justify-content: space-evenly;
-  gap: 10px;
-}
-.line{
-  height: 1px;
-  background-color: rgb(168, 168, 168);
-}
-.right_mc>div{
-  font-size:3.5vw;
-  line-height: 0.9;
-  font-family: rejoy2;
-}
-.playreel{
-    font-family: rejoy2;
-}
-.buttondiv{
-  /* display: flex;
-  justify-content: flex-end;
-  align-items: center; */
+.buttondiv {
   display: flex;
   width: 37vw;
   align-self: flex-end;
   padding: 1.4vw;
-  text-align: end ;
- 
+  text-align: end;
 }
-.buttondiv button{
+
+.buttondiv button {
   padding: 0.9vw 1.6vw;
   border-radius: 50px;
   border: 1px solid rgb(36, 36, 36);
@@ -122,17 +83,50 @@
   font-family: rejoy2;
   font-size: 1vw;
   color: rgb(76, 76, 76);
+  /* position:relative; */
 }
-.quote{
+
+.playreel {
+  padding: 10;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: rejoy2;
+  font-size: 1.1vw;
+}
+
+.foot_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.line {
+  width: 0px;
+  height: 1px;
+  background-color: rgb(168, 168, 168);
+}
+
+.quote {
   font-family: rejoy;
   font-size: large;
   color: rgb(76, 76, 76);
 }
 
-.playreel{
-  font-size: 1.1vw;
+.video-container video {
+  position: relative;
+  height: auto;
 }
 
-#menubar{
-  height: 0;
+.right_mc > div {
+  font-size: 3.5vw;
+  line-height: 0.9;
+  font-family: rejoy2;
 }

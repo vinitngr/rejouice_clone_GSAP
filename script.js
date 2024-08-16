@@ -37,6 +37,8 @@ function loco() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
+// loco();
+
 function page1Animation() {
   const tl = gsap.timeline({ delay: 0.2 });
   tl.from(
@@ -59,17 +61,6 @@ function page1Animation() {
     },
     "a"
   );
-
-  let menu = document.querySelector("#menu");
-  menu.addEventListener("click", () => {
-    let menubar = document.querySelector("#menubar");
-    gsap.to(menubar, {
-      height: "calc(100vh - 12vw)",
-      duration: 0.5,
-      ease: "power1.out",
-    });
-  });
-
   let click = document.querySelector(".click");
   click.addEventListener("click", () => {
     console.log("hi");
@@ -80,6 +71,7 @@ function page1Animation() {
       ease: "power1.out",
     });
   });
+
 }
 function cursor() {
   const page1 = document.querySelector(".page1content");
@@ -103,12 +95,55 @@ function cursor() {
     });
   });
 }
-// loco();
 cursor();
 page1Animation();
 
-function page2Animation(){
+const menu = document.querySelector("#menu");
+const close = document.querySelector('#close');
 
-}
-page2Animation();
+menu.addEventListener("click", () => {
+  gsap.to("#menubar", {
+    height: "calc(100vh - 12vw)",
+    duration: 0.7,
+    ease: "power1.out",
+  });
 
+  gsap.from(".right_mc div", {
+    y: 80,
+    opacity: 0,
+    stagger: 0.1,
+  });
+  
+  gsap.set(".line", { width: "0%" });
+  
+  gsap.to(".line", {
+    width: "100%",
+    delay: 0.3,
+    duration: 1,
+  });
+  gsap.from(".buttondiv button", {
+    y: 150,
+    opacity: 0,
+    duration: 1,
+  });
+});
+
+close.addEventListener('click', () => {
+  gsap.to("#menubar", {
+    height: 0,
+    duration: 0.7,
+    ease: "power1.out",
+  });
+
+  gsap.to(".right_mc div", {
+    y: 80,
+    opacity: 0,
+    stagger: {
+      amount: 0.1,
+      from: "end"
+    }, 
+    // stagger: -0.1 ,   both stagger value have difference in time for each 
+    duration: 0.7,
+  });
+
+}); 
