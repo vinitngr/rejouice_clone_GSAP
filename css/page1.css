@@ -4,8 +4,8 @@ html {
   padding: 0;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
-  scrollbar-width: thin; 
-  scrollbar-color: #888 #f1f1f1; 
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
   user-select: none;
 }
 .click {
@@ -52,7 +52,6 @@ video {
   font-family: rejoy2;
   src: url(../source/rejoy2.woff2);
 }
-
 div {
   text-align: left;
 }
@@ -71,9 +70,8 @@ nav {
 .tva {
   cursor: pointer;
   display: flex;
-  gap:3px;
+  gap: 3px;
 }
-
 .page1content {
   position: relative;
   height: 100%;
@@ -81,7 +79,6 @@ nav {
   z-index: 2;
   background-color: rgba(255, 0, 0, 0.06);
 }
-
 .page2 {
   width: 100%;
   height: 100vh;
@@ -104,22 +101,19 @@ nav {
   display: inline-block;
   letter-spacing: -0.5vw;
 }
-
 .navelem-zindex {
   z-index: 200;
 }
-
 .headline .ij {
   transform: scaleY(0.76) scaleX(0.9);
   line-height: 1.35;
   vertical-align: bottom;
 }
-
 .tva > span {
   display: inline-block;
 }
-@media screen and (width <= 700px){
- .headline{
-  bottom: -5%;
- }
+@media screen and (width <= 700px) {
+  .headline {
+    bottom: -5%;
+  }
 }
