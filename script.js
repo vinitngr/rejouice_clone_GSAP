@@ -206,16 +206,18 @@ function socialSectionHover(){
 menuAnimation();
 socialSectionHover();
 
-
-
-document.querySelectorAll('.onhover').forEach((e) => {
-  e.addEventListener('mouseenter', () => {
-    e.style.setProperty('--transformScale', '1');
-    e.style.setProperty('--transformOrigin', 'bottom left');
+function buttonhover(){
+  document.querySelectorAll('.onhover').forEach((e) => {
+    e.addEventListener('mouseenter', () => {
+      e.style.setProperty('--transformScale', '1');
+      e.style.setProperty('--transformOrigin', 'bottom left');
+    });
+  
+    e.addEventListener('mouseleave', () => {
+      e.style.setProperty('--transformScale', '0');
+      e.style.setProperty('--transformOrigin', 'bottom right');
+    });
   });
-
-  e.addEventListener('mouseleave', () => {
-    e.style.setProperty('--transformScale', '0');
-    e.style.setProperty('--transformOrigin', 'bottom right');
-  });
-});
+  
+}
+buttonhover();

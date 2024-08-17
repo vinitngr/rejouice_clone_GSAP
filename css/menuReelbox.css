@@ -187,7 +187,7 @@ button:hover::before {
   height: 1px; 
   background-color: rgb(59, 59, 59);
   transform: scaleX(var(--transformScale, 0));
-  transform-origin: var(--transformOrigin, bottom left);
+  transform-origin: var(--transformOrigin, bottom left);  /*-transformOrigin has not been defined, it will fall back to the default value bottom left.*/
   transition: transform 0.5s ease;
 }
 
