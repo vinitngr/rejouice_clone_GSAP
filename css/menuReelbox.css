@@ -176,6 +176,7 @@ button:hover::before {
 }
 .onhover {
   position: relative;
+  cursor: pointer;
 }
 
 .onhover::after {
@@ -197,3 +198,4 @@ button:hover::before {
 #menu::after{
   background-color: rgb(255, 255, 255);
 }
+

@@ -118,3 +118,8 @@ nav {
 .tva > span {
   display: inline-block;
 }
+@media screen and (width <= 700px){
+ .headline{
+  bottom: -5%;
+ }
+}

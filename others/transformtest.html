@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transition</title>
+    <style>
+        body{
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-container {
+            width: 250px;
+            height: 100px;
+           position: relative;
+           background-color: rgb(255, 255, 255);
+           color: rgb(0, 0, 0);
+           overflow: hidden;
+        }
+
+        .text-container div {
+            top: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 100px;
+            position: absolute;
+            transition: transform 0.5s ease;
+            line-height: 1;
+        }
+
+        .text-container .text1 {
+            transform: translateY(0);
+        }
+
+        .text-container .text2 {
+             /* position: absolute; */
+            transform: translateY(200%);
+        }
+
+        .text-container:hover .text1 {
+            transform: translateY(-200%);
+        }
+
+        .text-container:hover .text2 {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div class="text1">Home</div>
+        <div class="text2" >Home</div>
+        <div class="text-container">
+            <div class="text1">Home</div>
+            <div class="text2" >Home</div>
+        </div>
+    </div>
+    
+</body>
+</html>
