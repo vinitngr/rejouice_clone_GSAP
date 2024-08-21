@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: rejoy2;
+        src: url(../source/rejoy2.woff2);
+      }
+      body {
+        background-color: rgb(246, 221, 189);
+      }
+      .center {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .right_mc {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 100;
+      }
+      .right_mc > div {
+        font-size: 3.5vw;
+        line-height: 0.9;
+        font-family: rejoy2;
+      }
+      .right_mc div {
+        overflow: hidden;
+        width: fit-content;
+      }
+      .onhover {
+        position: relative;
+        cursor: pointer;
+      }
+      .onhover::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(59, 59, 59);
+        transform: scaleX(var(--transformScale, 0));
+        transform-origin: var(
+          --transformOrigin,
+          bottom left
+        ); /*-transformOrigin has not been defined, it will fall back to the default value bottom left.*/
+        transition: transform 0.5s ease;
+      }
+      .right_mc .onhover::after {
+        height: 2px;
+      }
+
+
+      /* up hover effect */
+      .right_mc div {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .right_mc div span {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(0);
+        transition: transform 0.5s ease;
+      }
+
+      .right_mc div span:nth-child(2) {
+        position: relative;
+        z-index: 1;
+        transform: translateY(100%);
+      }
+
+      .right_mc div:hover span:nth-child(1) {
+        transform: translateY(-100%);
+      }
+
+      .right_mc div:hover span:nth-child(2) {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="right_mc">
+        <div
+          style="text-decoration: underline; text-decoration-thickness: 2px"
+          class="onhover"
+        >
+          <span>Home</span>
+          <span style="background-color: rgb(159, 255, 33)">Home</span>
+        </div>
+        <div class="onhover">
+          <span>Work</span>
+          <span>Work</span>
+        </div>
+        <div class="onhover">
+          <span>Services & Models</span>
+          <span>Services & Models</span>
+        </div>
+        <div class="onhover">
+          <span>About</span>
+          <span>About</span>
+        </div>
+        <div class="onhover">
+          <span>Contact</span>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      function buttonhover() {
+        document.querySelectorAll(".onhover").forEach((e) => {
+          e.addEventListener("mouseenter", () => {
+            e.style.setProperty("--transformScale", "1");
+            e.style.setProperty("--transformOrigin", "bottom left");
+          });
+
+          e.addEventListener("mouseleave", () => {
+            e.style.setProperty("--transformScale", "0");
+            e.style.setProperty("--transformOrigin", "bottom right");
+          });
+        });
+      }
+      buttonhover();
+    </script>
+  </body>
+</html>

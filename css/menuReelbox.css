@@ -169,12 +169,50 @@ button:hover::before {
   transform-origin: var(
     --transformOrigin,
     bottom left
-  ); /*-transformOrigin has not been defined, it will fall back to the default value bottom left.*/
-  transition: transform 0.5s ease;
+  ); 
+  transition: transform 0.5s ease 0.2s;
 }
+
+.right_mc .onhover::after {
+  transition-delay:0.3s ;
+}
+
 .right_mc .onhover::after {
   height: 2px;
 }
 #menu::after {
   background-color: rgb(255, 255, 255);
 }
+
+
+
+.right_mc div {
+  position: relative;
+  overflow: hidden;
+}
+
+.right_mc div span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+
+.right_mc div span:nth-child(2) {
+  position: relative;
+  z-index: 1;
+  transform: translateY(100%);
+}
+
+.right_mc div:hover span:nth-child(1) {
+  transform: translateY(-100%);
+}
+
+.right_mc div:hover span:nth-child(2) {
+  transform: translateY(0);
+}
+
+
+
